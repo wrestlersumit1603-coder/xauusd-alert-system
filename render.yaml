@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: xauusd-backend
+    env: node
+    plan: free
+    region: singapore
+    branch: master
+    rootDir: backend
+    buildCommand: npm install && npm run build
+    startCommand: node dist/index.js
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: PRICE_PROVIDER
+        value: polling
+      - key: POLLING_PRICE_URL
+        value: https://xaus.com/api/v1/spot
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
