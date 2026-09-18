@@ -9,7 +9,7 @@ export const config = {
   priceProvider: (process.env.PRICE_PROVIDER || 'polling') as 'mock' | 'exness' | 'polling',
   exnessApiUrl: process.env.EXNESS_API_URL || '',
   exnessApiKey: process.env.EXNESS_API_KEY || '',
-  pollingPriceUrl: process.env.POLLING_PRICE_URL || 'https://xaus.com/api/v1/spot',
+  pollingPriceUrl: process.env.POLLING_PRICE_URL || 'https://www.chartgoldprice.com/api/data',
   pollingApiKey: process.env.POLLING_API_KEY || '',
   telegramBotToken: process.env.TELEGRAM_BOT_TOKEN || '',
   telegramChatId: process.env.TELEGRAM_CHAT_ID || '',

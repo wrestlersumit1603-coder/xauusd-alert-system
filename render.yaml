@@ -19,7 +19,7 @@ services:
       - key: PRICE_PROVIDER
         value: polling
       - key: POLLING_PRICE_URL
-        value: https://xaus.com/api/v1/spot
+        value: https://www.chartgoldprice.com/api/data
       - key: TELEGRAM_BOT_TOKEN
         sync: false
       - key: TELEGRAM_CHAT_ID
