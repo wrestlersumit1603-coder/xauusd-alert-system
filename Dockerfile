@@ -1,9 +1,10 @@
 FROM node:22-slim
 WORKDIR /app
 COPY package.json ./
+COPY package-lock.json ./
 COPY backend/package.json ./backend/package.json
 COPY frontend/package.json ./frontend/package.json
-RUN npm install --workspace=backend --omit=dev && npm install --workspace=frontend --omit=dev || npm install
+RUN npm install
 COPY backend ./backend
 COPY frontend ./frontend
 RUN npm run build --workspace=backend
